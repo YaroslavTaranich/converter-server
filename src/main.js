@@ -6,9 +6,10 @@ const WebSocketServer = require("./ws")
 const startUploadsCleaner = require("./uploads-cleaner")
 
 const app = express()
+
 app.use(
   cors({
-    origin: config.get("HOST") + ":" + config.get("FRONT_PORT"),
+    origin: config.get("HOST"),
   })
 )
 
